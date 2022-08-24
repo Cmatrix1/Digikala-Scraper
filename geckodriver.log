@@ -122,3 +122,84 @@ Read port: 8528
 1661362101362	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileui0bUh\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:8519/devtools/browser/8948604f-18ec-49c7-9a37-15cf1e609e96
+1661362694022	Marionette	INFO	Stopped listening on port 8528
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e" "--remote-debugging-port" "8693" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilekHGOA6"
+1661362385440	Marionette	INFO	Marionette enabled
+1661362385449	Marionette	INFO	Listening on port 8702
+WebDriver BiDi listening on ws://localhost:8693
+Read port: 8702
+1661362385993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilekHGOA6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:8693/devtools/browser/f75747ef-cd66-400a-b9eb-b76ded3eb70c
+1661362694986	Marionette	INFO	Stopped listening on port 8702
+!!! error running onStopped callback: TypeError: callback is not a function
+Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "8880" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile2lxGR4"
+1661362671913	Marionette	INFO	Marionette enabled
+1661362671921	Marionette	INFO	Listening on port 8889
+WebDriver BiDi listening on ws://localhost:8880
+Read port: 8889
+1661362672701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile2lxGR4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:8880/devtools/browser/0c6cd8e1-a785-41c2-aaa1-abe190603150
+1661363241982	Marionette	INFO	Stopped listening on port 8889
+61363232617	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "headless" "--remote-debugging-port" "12055" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileC0FQmt"
+1661363234363	Marionette	INFO	Marionette enabled
+1661363234373	Marionette	INFO	Listening on port 12066
+WebDriver BiDi listening on ws://localhost:12055
+Read port: 12066
+1661363235027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileC0FQmt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:12055/devtools/browser/ca4d7f57-b661-436a-87cd-13e00dbf8cb9
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2273: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1661363472470	geckodriver	INFO	Listening on 127.0.0.1:12215
+1661363475525	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "12216" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile2dtSgC"
+*** You are running in headless mode.
+1661363476140	Marionette	INFO	Marionette enabled
+1661363476148	Marionette	INFO	Listening on port 12227
+WebDriver BiDi listening on ws://localhost:12216
+Read port: 12227
+1661363476700	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile2dtSgC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:12216/devtools/browser/79dae0d9-5276-41a8-9bea-23fc50f2604d
+1661363701951	geckodriver	INFO	Listening on 127.0.0.1:12469
+1661363726471	geckodriver	INFO	Listening on 127.0.0.1:12488
+1661363729857	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "12489" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofiley5AeSF"
+1661363731106	Marionette	INFO	Marionette enabled
+1661363731117	Marionette	INFO	Listening on port 12511
+WebDriver BiDi listening on ws://localhost:12489
+Read port: 12511
+1661363731828	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofiley5AeSF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:12489/devtools/browser/6f15a76e-9030-48f2-a968-ef0aab57f6d0
+JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+gram Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "12607" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileJSV3ND"
+1661363793432	Marionette	INFO	Marionette enabled
+1661363793443	Marionette	INFO	Listening on port 12624
+WebDriver BiDi listening on ws://localhost:12607
+Read port: 12624
+1661363794237	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileJSV3ND\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:12607/devtools/browser/b3e45f15-60a8-41f9-9cfb-87a53f2644af
+1661363814153	Marionette	INFO	Stopped listening on port 12624
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1661363814828	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.js :: allowAllCerts.disable :: line 57"  data: no] Stack trace: allowAllCerts.disable()@cert.js:57
+destroy()@Session.jsm:207
+deleteSession()@WebDriverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+observe()@resource://gre/modules/AsyncShutdown.jsm:577
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1661363850776	geckodriver	INFO	Listening on 127.0.0.1:12700
+1661363854158	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "12701" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilez5xt5k"
+*** You are running in headless mode.
+1661363855111	Marionette	INFO	Marionette enabled
+1661363855127	Marionette	INFO	Listening on port 12711
+WebDriver BiDi listening on ws://localhost:12701
+Read port: 12711
+1661363855744	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilez5xt5k\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:12701/devtools/browser/34c306ca-3051-4ae3-9d68-a3998b32cb79

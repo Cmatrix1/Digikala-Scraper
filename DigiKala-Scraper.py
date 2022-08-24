@@ -8,6 +8,7 @@ from os import system
 from DataBase import Phones, session
 
 
+system("clear")
 print("[x] Waiting For Load Driver . . .") ## LOG
 driver = webdriver.Firefox(executable_path="C://geckodriver.exe")
 system("clear")
@@ -22,7 +23,10 @@ def check_element_exist(mode, inp):
 def validate_pagination(pagination):
     try:
         num = pagination.text.split()[-1]
-        return unidecode(num)
+        number = unidecode(num)
+        if number > 100:
+            number = 100
+        return number
     except Exception as err:
         return 100
 
@@ -59,11 +63,11 @@ def extract_product_information(products):
         link = validate_link(product.find("a")["href"])
         image = product.find("img")["data-src"]
         name = product.find("h2").text
-        # try:
-        price = product.find(class_="d-flex ai-center jc-end gap-1 color-700 color-400 text-h5 grow-1").span.text
-        objects.append(Phones(link=link, photo=image, name=name, price=unidecode(price)))
-        # except:
-        #     return False
+        try:
+            price = product.find(class_="d-flex ai-center jc-end gap-1 color-700 color-400 text-h5 grow-1").span.text
+            objects.append(Phones(link=link, photo=image, name=name, price=unidecode(price)))
+        except:
+            return False
     session.add_all(objects)
     session.commit()
     print("[+] Add ", len(objects), "Objects in DataBase")
@@ -78,16 +82,16 @@ def main(url):
 
     for page in pages:
         url = core_url+"?page="+str(page)
-        # try:
-        load_all_page(url=url)
-        products = extract_products()
-        output = extract_product_information(products)
-        if output == False:
-            print("[+] Products Ended") ## LOG
-            break
-        # except Exception as err:
-        #     cant.write(url+"\n")
-        #     print("[-] Error On Page ", url)
+        try:
+            load_all_page(url=url)
+            products = extract_products()
+            output = extract_product_information(products)
+            if output == False:
+                print("[+] Products Ended") ## LOG
+                break
+        except Exception as err:
+            cant.write(url+"\n")
+            print("[-] Error On Page ", url)
 
 
 url = input("Enter The List Of Product Like This Link:\n[https://www.digikala.com/search/category-notebook-netbook-ultrabook/]\nLink: ")
