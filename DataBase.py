@@ -11,7 +11,7 @@ Base = declarative_base()
 session = sessionmaker(bind=engine)()
 
 
-class Laptops(Base):
+class Phones(Base):
     __tablename__ = 'Digikala'
     id = Column(Integer, primary_key=True)
     link = Column(String)
