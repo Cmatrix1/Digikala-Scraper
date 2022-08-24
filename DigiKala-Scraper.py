@@ -61,7 +61,7 @@ def extract_product_information(products):
         name = product.find("h2").text
         # try:
         price = product.find(class_="d-flex ai-center jc-end gap-1 color-700 color-400 text-h5 grow-1").span.text
-        objects.append(Laptops(link=link, photo=image, name=name, price=unidecode(price)))
+        objects.append(Phones(link=link, photo=image, name=name, price=unidecode(price)))
         # except:
         #     return False
     session.add_all(objects)
