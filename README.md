@@ -7,6 +7,12 @@ This is Scraper For Digikala with Selenium and Bs4 for Scrap and SqlArhemy for s
 git clone https://github.com/Cmatrix1/DigiKala-Scraper
 ```
 
+- FireFox Or Chrome Driver For Open Browser With Selenium Introduce the Web Driver Path in Line 82
+- [Download Web Driver](https://github.com/mozilla/geckodriver/releases/tag/v0.31.0)
+```python
+driver = webdriver.Firefox(executable_path="C://geckodriver.exe")
+```
+
 - install selenium
 ```
 pip install selenium
