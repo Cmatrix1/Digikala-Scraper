@@ -46,7 +46,7 @@ Link: https://www.digikala.com/search/category-men-clothing/
 ```python
 engine = create_engine('sqlite:///digikala.db', echo=True)
 ```
-- Enter Your Table DataBase Name in line 15 in File DataBase.html
+- Enter Your Table DataBase Name in line 15 in File DataBase.py
 ```python
 __tablename__ = 'Digikala'
 ```
