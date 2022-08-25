@@ -10,8 +10,10 @@ engine = create_engine('sqlite:///digikala.db', echo=True)
 Base = declarative_base()
 session = sessionmaker(bind=engine)()
 
-class Phones(Base):
-    __tablename__ = 'Phones'
+
+
+class Products(Base):
+    __tablename__ = 'Products'
     id = Column(Integer, primary_key=True)
     link = Column(String)
     photo = Column(String)

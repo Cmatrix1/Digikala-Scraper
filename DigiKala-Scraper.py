@@ -1,16 +1,12 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from time import sleep
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+from DataBase import Products, session
 from unidecode import unidecode
 from bs4 import BeautifulSoup
+from time import sleep
 from os import system
-from DataBase import Phones, session
 
-
-system("clear")
-print("[x] Waiting For Load Driver . . .") ## LOG
-driver = webdriver.Firefox(executable_path="C://geckodriver.exe")
 system("clear")
 
 def check_element_exist(mode, inp):
@@ -18,17 +14,6 @@ def check_element_exist(mode, inp):
         return driver.find_element(mode, inp)
     except:
         return False
-
-
-def validate_pagination(pagination):
-    try:
-        num = pagination.text.split()[-1]
-        number = unidecode(num)
-        if number > 100:
-            number = 100
-        return number
-    except Exception as err:
-        return 100
 
 
 def load_all_page(url):
@@ -43,10 +28,9 @@ def load_all_page(url):
         pagination = check_element_exist("xpath", "/html/body/div[1]/div[1]/div[3]/div[3]/div[1]/div/section[1]/div[2]/div[2]/div[2]")
     sleep(3)
     print(f"[+] Page {url} Loaded") ## LOG
-    return validate_pagination(pagination)
 
 
-def validate_link(link):
+def shorten_link(link):
     valid = link.split("/")[:3]
     return "/".join(valid)
 
@@ -60,30 +44,28 @@ def extract_products():
 def extract_product_information(products):
     objects = []
     for product in products:
-        link = validate_link(product.find("a")["href"])
+        link = shorten_link(product.find("a")["href"])
         image = product.find("img")["data-src"]
         name = product.find("h2").text
         try:
             price = product.find(class_="d-flex ai-center jc-end gap-1 color-700 color-400 text-h5 grow-1").span.text
-            objects.append(Phones(link=link, photo=image, name=name, price=unidecode(price)))
+            objects.append(Products(link=link, photo=image, name=name, price=unidecode(price)))
+            system("clear")
         except:
             return False
     session.add_all(objects)
     session.commit()
-    print("[+] Add ", len(objects), "Objects in DataBase")
+    system("clear")
+    print("[+] Add ", len(objects), "Objects in DataBase") ## LOG
 
 
 def main(url):
     ## Example Url "https://www.digikala.com/search/category-notebook-netbook-ultrabook/"
-    core_url = url
-    count = load_all_page(core_url)
-    pages = [i for i in range(1, int(count))]
     cant = open("cant.txt", "a")
-
-    for page in pages:
-        url = core_url+"?page="+str(page)
+    for i in range(1, 100):
+        url_p = url+"?page="+str(i)
         try:
-            load_all_page(url=url)
+            load_all_page(url=url_p)
             products = extract_products()
             output = extract_product_information(products)
             if output == False:
@@ -91,8 +73,12 @@ def main(url):
                 break
         except Exception as err:
             cant.write(url+"\n")
-            print("[-] Error On Page ", url)
+            print("[-] Error On Page ", url_p)
 
 
 url = input("Enter The List Of Product Like This Link:\n[https://www.digikala.com/search/category-notebook-netbook-ultrabook/]\nLink: ")
+system("clear")
+print("[x] Waiting For Load Driver . . .") ## LOG
+driver = webdriver.Firefox(executable_path="C://geckodriver.exe")
+system("clear")
 main(url)
