@@ -13,18 +13,11 @@ git clone https://github.com/Cmatrix1/DigiKala-Scraper
 driver = webdriver.Firefox(executable_path="C://geckodriver.exe")
 ```
 
-- install selenium
+- install requirements
 ```
-pip install selenium
+pip install requirements.txt
 ```
-- install bs4 
-```
-pip install bs4
-```
-- install sqlalchemy
-```
-pip install SQLAlchemy
-```
+
 - run the project
 ```
 python DigiKala-Scraper.py
