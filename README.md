@@ -35,7 +35,7 @@ Link: https://www.digikala.com/search/category-men-clothing/
 
 # Configuration
 
-- Enter Your DataBase Name in line 9 in File DataBase.html
+- Enter Your DataBase Name in line 9 in File DataBase.py
 ```python
 engine = create_engine('sqlite:///digikala.db', echo=True)
 ```
